@@ -1,17 +1,17 @@
-/// @DnDAction : YoYo Games.Collisions.If_Collision_Point
-/// @DnDVersion : 1
-/// @DnDHash : 2BED781C
+/// @DnDAction : YoYo Games.Collisions.If_Object_At
+/// @DnDVersion : 1.1
+/// @DnDHash : 42AB1141
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "obj" "oBullet"
-/// @DnDSaveInfo : "obj" "4414d534-3430-4de4-9ee3-a67d8bd463c9"
-var l2BED781C_0 = collision_point(x + 0, y + 0, oBullet, true, 1);
-if((l2BED781C_0))
+/// @DnDArgument : "object" "oBullet"
+/// @DnDSaveInfo : "object" "4414d534-3430-4de4-9ee3-a67d8bd463c9"
+var l42AB1141_0 = instance_place(x + 0, y + 0, oBullet);
+if ((l42AB1141_0 > 0))
 {
 	/// @DnDAction : YoYo Games.Instance Variables.Set_Health
 	/// @DnDVersion : 1
 	/// @DnDHash : 453BEB94
-	/// @DnDParent : 2BED781C
+	/// @DnDParent : 42AB1141
 	/// @DnDArgument : "health" "-1"
 	/// @DnDArgument : "health_relative" "1"
 	if(!variable_instance_exists(id, "__dnd_health")) __dnd_health = 0;
@@ -20,7 +20,7 @@ if((l2BED781C_0))
 	/// @DnDAction : YoYo Games.Instance Variables.If_Health
 	/// @DnDVersion : 1
 	/// @DnDHash : 43DD7862
-	/// @DnDParent : 2BED781C
+	/// @DnDParent : 42AB1141
 	if(!variable_instance_exists(id, "__dnd_health")) __dnd_health = 0;
 	if(__dnd_health == 0)
 	{
