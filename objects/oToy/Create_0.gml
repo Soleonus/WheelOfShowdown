@@ -1,5 +1,15 @@
 firingdelay = 0;
 recoil = 0;
+maxfiredelay = 40;
+maxrecoil = 3;
+recangle = 2;
+buldamage = 0.1;
+bulspeed = 10;
 ammo = 6;
 magazine = 6;
 i = 0;
+reload = 71;
+range = 4;
+active = false;
+xoffset = 5;
+yoffset = -7;

@@ -1,7 +1,6 @@
 //Get player input
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
-//key_down = keyboard_check(ord("S"));
 key_jump = keyboard_check_pressed(ord("W"));
 
 //Calculate Movement
@@ -56,66 +55,79 @@ y = y + vsp;
 if (keyboard_check_pressed(ord("1"))) // Gun
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oGun);
 }
 if (keyboard_check_pressed(ord("2"))) // Revolver
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oRevolver);
 }
 if (keyboard_check_pressed(ord("3"))) // Uzi
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oUzi);
 }
 if (keyboard_check_pressed(ord("4"))) // Shotgun
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oShotgun);
 }
 if (keyboard_check_pressed(ord("5"))) // Minigun
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oMinigun);
 }
 if (keyboard_check_pressed(ord("6"))) // Scar
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oScar);
 }
 if (keyboard_check_pressed(ord("7"))) // Sniper
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oSniper);
 }
 if (keyboard_check_pressed(ord("8"))) // P90
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oP90);
 }
 if (keyboard_check_pressed(ord("9"))) // Auto Shotgun
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oAutoShotgun);
 }
 if (keyboard_check_pressed(ord("0"))) // Flintlock Pistol
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oFlintlock);
 }
 if (keyboard_check_pressed(ord("T"))) // Toy Gun
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oToy);
 }
 if (keyboard_check_pressed(ord("Y"))) // M1911
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oM1911);
 }
 if (keyboard_check_pressed(ord("U"))) // M416
 {
 		layer_destroy_instances("Gun");
+		hasgun = false;
 		instance_create_layer(x,y,"Gun",oM416);
 }
 
