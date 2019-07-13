@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "6cc629e5-e5b7-4576-9e0e-f7d17a2d84f5",
+            "Value": {
+                "id": "4c40e138-6c3a-427e-93ad-3d0e8480263d",
+                "resourcePath": "objects\\oShuriken\\oShuriken.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "721cb4c7-bc59-49cb-854b-b3902c388f1d",
             "Value": {
                 "id": "1ab86273-62c3-4ccd-a184-494b83ec0cb9",
@@ -327,6 +335,14 @@
             }
         },
         {
+            "Key": "a43ef434-b641-4f3f-a044-f204756b3e32",
+            "Value": {
+                "id": "fc9f5ac2-5c69-4c20-ac83-8c88f0ce2b71",
+                "resourcePath": "objects\\oThrownParent\\oThrownParent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a4ab2250-a5dc-4a2c-b9dd-2a232d79d4a6",
             "Value": {
                 "id": "e8778be8-875f-401e-8055-d3735899214e",
@@ -423,6 +439,14 @@
             }
         },
         {
+            "Key": "b9ccca31-d030-499e-bff3-9a373f7f2823",
+            "Value": {
+                "id": "5400574e-5538-4909-a3af-58e8903c916a",
+                "resourcePath": "sprites\\sShuriken\\sShuriken.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c057128d-ee9e-40d0-93f3-6607241b0132",
             "Value": {
                 "id": "efb89e10-e65b-41a3-b839-fcb0409bb17c",
@@ -467,6 +491,14 @@
             "Value": {
                 "id": "13f219ac-10f8-412f-bfc5-004455e45b2b",
                 "resourcePath": "objects\\oToy\\oToy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e1db6a7d-0d8b-43e0-b9f1-ceecc09ad957",
+            "Value": {
+                "id": "c503e40f-842d-4a3b-bbac-11fbb02e1575",
+                "resourcePath": "objects\\oWeaponParent\\oWeaponParent.yy",
                 "resourceType": "GMObject"
             }
         },

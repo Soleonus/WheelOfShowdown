@@ -1,5 +1,5 @@
 if (swinging)
 {
-	oEnemy.hp -= damage;
+	other.hp -= damage;
 	contact = true;
 }

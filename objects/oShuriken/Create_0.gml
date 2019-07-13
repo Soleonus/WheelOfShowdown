@@ -1,0 +1,16 @@
+charge = 0;
+damage = 0;
+delay = 0;
+chargespd = 20;
+flightspd = 15;
+maxcharge = 100;
+maxdamage = 5;
+maxdelay = 50;
+ammo = 10;
+grv = 0.1;
+xoffset = 3;
+yoffset = -2;
+xmove = 5;
+ymove = 5;
+active = false;
+thrown = false;
