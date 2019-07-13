@@ -8,7 +8,7 @@ if (active == true)
 else
 {
 	image_angle = 0;
-	image_yscale = 1;
+	image_yscale = .75;
 }
 
 firingdelay = firingdelay - 1;

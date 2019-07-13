@@ -1,0 +1,13 @@
+swingdelay = 0;
+swingspeed = 15;
+damage = 0;
+charge = 0;
+chargespd = 5;
+maxswgdelay = 10;
+maxdamage = 15;
+maxcharge = 90;
+xoffset = 3;
+yoffset = -4;
+active = false;
+swinging = false;
+contact = false;

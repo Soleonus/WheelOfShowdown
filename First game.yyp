@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "0613c114-37b3-4675-81ca-6b1db211da6b",
+            "Value": {
+                "id": "980cac84-7e14-4114-94cd-c35328203c9b",
+                "resourcePath": "sprites\\sMachete\\sMachete.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "091a51e0-8953-4566-bdae-4518ea263c14",
             "Value": {
                 "id": "db48fab4-e93f-458e-8234-f1df3984f8a4",
@@ -95,10 +103,26 @@
             }
         },
         {
+            "Key": "37739c71-c8e0-4660-9546-2ce87104fc89",
+            "Value": {
+                "id": "a8cae82d-4a2e-4f57-a6a2-3873f13bed40",
+                "resourcePath": "objects\\oKatana\\oKatana.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "385acdf7-cab8-4edf-be12-579dec05bf9b",
             "Value": {
                 "id": "04097a86-585f-448d-b073-372c1b2ad93e",
                 "resourcePath": "objects\\oRevolver\\oRevolver.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3d370b7a-ea8a-445f-8fea-0200c9a17528",
+            "Value": {
+                "id": "b0f9f667-4c08-4c31-9107-7ce29a0a8921",
+                "resourcePath": "objects\\oMeleeParent\\oMeleeParent.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -263,6 +287,14 @@
             }
         },
         {
+            "Key": "939cbff8-862e-421c-b723-fa1e27bf43fb",
+            "Value": {
+                "id": "2b6b71df-456b-4f95-9dff-219b3f687e4c",
+                "resourcePath": "objects\\oMachete\\oMachete.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "94152473-cdda-4db4-9332-cb309250e0d7",
             "Value": {
                 "id": "63a4f3aa-ca09-4b10-925a-e83cce3a8f33",
@@ -308,6 +340,14 @@
                 "id": "6d98815a-11c0-401f-bca1-3f62d13df8eb",
                 "resourcePath": "objects\\oSniper\\oSniper.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a7c52f3e-aa9c-4cd5-afb7-c7caf0ec3279",
+            "Value": {
+                "id": "7fc7feff-82b2-44ef-a099-a8f607250708",
+                "resourcePath": "sprites\\sKatana\\sKatana.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
