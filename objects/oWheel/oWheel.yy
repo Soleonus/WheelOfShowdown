@@ -1,23 +1,33 @@
 {
-    "id": "47f4e9ac-8596-4af1-95cc-f86282faf01e",
+    "id": "eaab7e31-f838-4d21-90fe-ae86955865a5",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oAutoShotgun",
+    "name": "oWheel",
     "eventList": [
         {
-            "id": "d97c4e84-bbba-46d1-adfd-5bae34742c4f",
+            "id": "0ac683b0-c78f-4fe8-bd82-724e902c2886",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "47f4e9ac-8596-4af1-95cc-f86282faf01e"
+            "m_owner": "eaab7e31-f838-4d21-90fe-ae86955865a5"
+        },
+        {
+            "id": "2c1ed9b5-755f-4b49-bda2-d94972695aba",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "eaab7e31-f838-4d21-90fe-ae86955865a5"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "ec8c1f4b-cddb-4719-9273-0e47ecf7fc85",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -33,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "af34c6e9-94d8-4692-ade2-7439dea98871",
+    "spriteId": "bee5b98a-391d-464b-b833-f0b70a93648f",
     "visible": true
 }

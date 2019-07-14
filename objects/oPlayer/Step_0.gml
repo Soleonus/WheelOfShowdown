@@ -130,23 +130,32 @@ if (keyboard_check_pressed(ord("U"))) // M416
 		hasgun = false;
 		instance_create_layer(x,y,"Gun",oM416);
 }
-if (keyboard_check_pressed(ord("U"))) // Machete
+if (keyboard_check_pressed(ord("I"))) // Machete
 {
 		layer_destroy_instances("Gun");
 		hasgun = false;
 		instance_create_layer(x,y,"Gun",oMachete);
 }
-if (keyboard_check_pressed(ord("U"))) // Katana
+if (keyboard_check_pressed(ord("O"))) // Katana
 {
 		layer_destroy_instances("Gun");
 		hasgun = false;
 		instance_create_layer(x,y,"Gun",oKatana);
 }
-if (keyboard_check_pressed(ord("U"))) // Shuriken
+if (keyboard_check_pressed(ord("P"))) // Shuriken
 {
 		layer_destroy_instances("Gun");
 		hasgun = false;
 		instance_create_layer(x,y,"Gun",oShuriken);
+}
+
+
+if (keyboard_check_pressed(ord("F"))) 
+{
+	hasgun = false;
+	gun.active = false;
+	gun.x += 30 * sign(mouse_x-x);
+	gun = 0;
 }
 
 //Animation

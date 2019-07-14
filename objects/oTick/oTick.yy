@@ -1,23 +1,14 @@
 {
-    "id": "47f4e9ac-8596-4af1-95cc-f86282faf01e",
+    "id": "bacd2204-4350-4ee7-8b83-decb94c9497c",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oAutoShotgun",
+    "name": "oTick",
     "eventList": [
-        {
-            "id": "d97c4e84-bbba-46d1-adfd-5bae34742c4f",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "47f4e9ac-8596-4af1-95cc-f86282faf01e"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "ec8c1f4b-cddb-4719-9273-0e47ecf7fc85",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -33,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "af34c6e9-94d8-4692-ade2-7439dea98871",
+    "spriteId": "0ffc31b2-02fb-4860-8ac7-bfa4c0e106d7",
     "visible": true
 }

@@ -9,6 +9,8 @@ else
 {
 	image_angle = 0;
 	image_yscale = 1.5;
+	if (!place_meeting(x,y,oWall)) vspeed = 1;
+	else vspeed = 0;
 }
 
 image_xscale = abs(image_yscale);

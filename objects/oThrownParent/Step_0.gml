@@ -10,12 +10,14 @@ if (!thrown)
 	else
 	{
 		image_angle = 0;
-		image_yscale = 1.5;
+		image_yscale = 1.25;
+		if (!place_meeting(x,y,oWall)) vspeed = 1;
+		else vspeed = 0;
 	}
 
 	image_xscale = abs(image_yscale);
 
-	if (ammo <= 0) instance_destroy();
+	if (ammo <= 0) { active = false; instance_destroy(); }
 	
 	if (delay > 0) delay--;
 
@@ -23,13 +25,12 @@ if (!thrown)
 	{
 		charge += chargespd;
 	}
-	if (charge > 0) and (mouse_check_button_released(mb_left))
+	if (charge > 0) and (mouse_check_button_released(mb_left)) and (active)
 	{
 		flightspd = flightspd * sign(mouse_x-x) * charge/maxcharge;
 		thrown = true;
 		damage = charge/maxcharge * maxdamage;
 		ammo--;
-		active = false;
 		with(instance_copy(true))
 		{
 			ammo = other.ammo;

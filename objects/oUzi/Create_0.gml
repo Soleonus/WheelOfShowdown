@@ -13,3 +13,4 @@ range = 7;
 active = false;
 xoffset = 6;
 yoffset = -5;
+firemode = 0;
