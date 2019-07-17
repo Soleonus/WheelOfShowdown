@@ -159,8 +159,7 @@ if (keyboard_check_pressed(ord("F")))
 }
 
 //Animation
-image_xscale = 2;
-image_xscale = image_yscale;
+image_yscale = abs(image_xscale);
 if (!place_meeting(x,y+1,oWall))
 {
 	sprite_index = sPlayerA;
@@ -180,4 +179,4 @@ else
 	}
 }
 
-if (hsp != 0) image_xscale = sign(hsp);
+image_xscale = sign(mouse_x-x);

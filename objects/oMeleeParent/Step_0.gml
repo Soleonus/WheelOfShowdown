@@ -8,7 +8,7 @@ if (active == true)
 else
 {
 	image_angle = 0;
-	image_yscale = 1.5;
+	image_yscale = 1.25;
 	if (!place_meeting(x,y,oWall)) vspeed = 1;
 	else vspeed = 0;
 }

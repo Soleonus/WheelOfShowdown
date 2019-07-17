@@ -3,12 +3,12 @@ if (active == true)
 	x = oPlayer.x + xoffset * sign(mouse_x-x);
 	y = oPlayer.y + yoffset;
 	image_angle = point_direction(x,y,mouse_x,mouse_y) + recangle * max(0,(firingdelay / maxfiredelay)) * sign(mouse_x-x);
-	if(mouse_x > x) image_yscale = 0.5; else image_yscale = -0.5;
+	if(mouse_x > x) image_yscale = 1; else image_yscale = -1;
 }
 else
 {
 	image_angle = 0;
-	image_yscale = .75;
+	image_yscale = 1.25;
 	if (!place_meeting(x,y,oWall)) vspeed += 0.2;
 	else vspeed = 0;
 }
