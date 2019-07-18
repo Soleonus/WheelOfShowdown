@@ -9,7 +9,7 @@ else
 {
 	image_angle = 0;
 	image_yscale = 1.25;
-	if (!place_meeting(x,y,oWall)) vspeed = 1;
+	if (!place_meeting(x,y+1,oWall)) vspeed += 0.2;
 	else vspeed = 0;
 }
 
@@ -28,14 +28,12 @@ if (charge > 0) and (mouse_check_button_released(mb_left))
 if (swinging)
 {
 	charge -= swingspeed;
-	if (!contact) damage = charge/maxcharge * maxdamage
-	else damage = 0;
+	damage = charge/maxcharge * maxdamage
 	if (charge <= 0)
 	{
 		damage = 0;
 		charge = 0;
 		swinging = false;
 		swingdelay = maxswgdelay;
-		contact = false;
 	}
 }

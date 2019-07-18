@@ -10,4 +10,4 @@ xoffset = 0;
 yoffset = 0;
 active = false;
 swinging = false;
-contact = false;
+contact = [0];

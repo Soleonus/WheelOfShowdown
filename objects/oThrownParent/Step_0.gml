@@ -4,20 +4,20 @@ if (!thrown)
 	{
 		x = oPlayer.x + (-xmove * charge/maxcharge + xoffset) * sign(mouse_x-x);
 		y = oPlayer.y - ymove * charge/maxcharge + yoffset;
-		image_angle = point_direction(x,y,mouse_x,mouse_y) - maxcharge/2 * sign(mouse_x-x) + charge * sign(mouse_x-x);
+		image_angle = point_direction(x,y,mouse_x,mouse_y) + charge * sign(mouse_x-x);
 		if(mouse_x > x) image_yscale = 1; else image_yscale = -1;
 	}
 	else
 	{
 		image_angle = 0;
 		image_yscale = 1.25;
-		if (!place_meeting(x,y,oWall)) vspeed = 1;
+		if (!place_meeting(x,y,oWall)) vspeed += 0.2;
 		else vspeed = 0;
 	}
 
 	image_xscale = abs(image_yscale);
 
-	if (ammo <= 0) { active = false; instance_destroy(); }
+	if (ammo <= 0) { oPlayer.gun = 0; active = false; instance_destroy(); }
 	
 	if (delay > 0) delay--;
 
@@ -41,6 +41,7 @@ if (!thrown)
 		}
 		direction = point_direction(x,y,mouse_x,mouse_y);
 		speed = abs(flightspd);
+		active = false;
 	}
 }
 else if (thrown)

@@ -1,0 +1,1 @@
+scrExplode(x,y,3,maxdamage);

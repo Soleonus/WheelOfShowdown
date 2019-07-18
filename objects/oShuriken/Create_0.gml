@@ -14,3 +14,4 @@ xmove = 15;
 ymove = 15;
 active = false;
 thrown = false;
+bounce = false;

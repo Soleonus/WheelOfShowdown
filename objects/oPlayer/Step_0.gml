@@ -148,13 +148,22 @@ if (keyboard_check_pressed(ord("P"))) // Shuriken
 		hasgun = false;
 		instance_create_layer(x,y,"Gun",oShuriken);
 }
+if (keyboard_check_pressed(ord("G"))) // Grenades
+{
+		layer_destroy_instances("Gun");
+		hasgun = false;
+		instance_create_layer(x,y,"Gun",oGrenade);
+}
 
+//if (hasgun) show_debug_message(gun);
+
+//if (!gun.active) { gun = 0; hasgun = false; }
 
 if (keyboard_check_pressed(ord("F"))) 
 {
 	hasgun = false;
 	gun.active = false;
-	gun.x += 30 * sign(mouse_x-x);
+	gun.x += gun.sprite_width+5 * sign(mouse_x-x);
 	gun = 0;
 }
 
@@ -179,4 +188,5 @@ else
 	}
 }
 
-image_xscale = sign(mouse_x-x);
+if (mouse_x-x != 0) image_xscale = sign(mouse_x-x);
+else image_xscale = 1;

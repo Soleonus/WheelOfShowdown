@@ -2,7 +2,7 @@
     "id": "43ef32aa-c6f5-4760-9160-ab4f21c9f827",
     "modelName": "GMProject",
     "mvc": "1.0",
-    "IsDnDProject": true,
+    "IsDnDProject": false,
     "configs": [
         
     ],
@@ -52,6 +52,14 @@
                 "id": "db48fab4-e93f-458e-8234-f1df3984f8a4",
                 "resourcePath": "rooms\\rWheel\\rWheel.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "0a93a19e-192f-4d48-afd6-499423cc1443",
+            "Value": {
+                "id": "4a25ff40-8905-4508-a5f6-7424b29433e0",
+                "resourcePath": "objects\\oExplosion\\oExplosion.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -207,6 +215,14 @@
             }
         },
         {
+            "Key": "48661c29-3f22-41e2-bce9-1f9465aa7bac",
+            "Value": {
+                "id": "1c548084-5e3d-413a-909e-1f7a0b68a17e",
+                "resourcePath": "sprites\\sGrenade\\sGrenade.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4ae179d4-e18c-46d2-959c-86255a14bfec",
             "Value": {
                 "id": "4c652740-f431-42ba-b9fc-45648633f14a",
@@ -244,6 +260,14 @@
                 "id": "7e09fd48-8e1e-447d-994e-eff6e0a58274",
                 "resourcePath": "sprites\\sShotgun\\sShotgun.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6026d087-4487-4184-86c6-fd39f64f0a51",
+            "Value": {
+                "id": "b87f6b27-d9ad-464a-8cad-19f703fa809e",
+                "resourcePath": "scripts\\scrExplode\\scrExplode.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -340,6 +364,14 @@
                 "id": "df7be2e5-48b2-4fb5-9b67-24b174629532",
                 "resourcePath": "objects\\oWall\\oWall.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "81dafd96-8913-4ac0-ab2f-9c9555b2579c",
+            "Value": {
+                "id": "3d183b83-6f01-43d6-8344-dcacd00825f3",
+                "resourcePath": "scripts\\scrInArray\\scrInArray.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -559,6 +591,14 @@
             }
         },
         {
+            "Key": "d5dc68a2-e2b6-4750-ad10-43c21a4fba21",
+            "Value": {
+                "id": "dea7cc3a-6f40-40c8-b581-ad796d87a88d",
+                "resourcePath": "sprites\\sExplosion\\sExplosion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dc4098a4-273f-48ab-ad77-e176d8a5b161",
             "Value": {
                 "id": "6ed67c41-b96b-494b-bc8e-80ef764247be",
@@ -669,10 +709,19 @@
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
             }
+        },
+        {
+            "Key": "f4662749-2290-4c29-99d6-070e051bec0a",
+            "Value": {
+                "id": "e9b96d71-00f8-4c97-a1e8-acc1384a7f77",
+                "resourcePath": "objects\\oGrenade\\oGrenade.yy",
+                "resourceType": "GMObject"
+            }
         }
     ],
     "script_order": [
-        
+        "6026d087-4487-4184-86c6-fd39f64f0a51",
+        "81dafd96-8913-4ac0-ab2f-9c9555b2579c"
     ],
     "tutorial": ""
 }
