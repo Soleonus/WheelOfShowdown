@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "0f6e2e8f-5a47-4d20-94f8-94a561e8b5fc",
+            "Value": {
+                "id": "b948d3b4-1171-4992-85b9-bea5309422cc",
+                "resourcePath": "sprites\\sRocket\\sRocket.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0ffc31b2-02fb-4860-8ac7-bfa4c0e106d7",
             "Value": {
                 "id": "9c0c5443-5bd2-4d7b-b677-3b50b9acba24",
@@ -327,6 +335,14 @@
             }
         },
         {
+            "Key": "756f3252-ee5f-425a-a5d4-1842841ded82",
+            "Value": {
+                "id": "354b653c-a57a-47b9-8398-f687b2f2b70a",
+                "resourcePath": "sprites\\sRPG\\sRPG.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "75a9b5f8-e87e-4c9c-a09a-9c55ad96463e",
             "Value": {
                 "id": "83ce748b-4330-44ff-abec-13b55b9c70e5",
@@ -415,6 +431,14 @@
             }
         },
         {
+            "Key": "9868e5c0-dc39-4bb4-8d01-e7ac9831c445",
+            "Value": {
+                "id": "b7f792b3-0e4e-4a99-ae94-18a28462227b",
+                "resourcePath": "objects\\oRocket\\oRocket.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "996ab6d7-7dd6-4d15-9a31-5ec9c15c6c4e",
             "Value": {
                 "id": "0da28831-db82-409b-b98c-7be04427153d",
@@ -476,6 +500,14 @@
                 "id": "1254596b-d04b-4d5e-a109-9b736cfe8aa4",
                 "resourcePath": "views\\a83ec99d-7891-4c4c-97cc-f3aad8a524f1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a8fa1c49-5f77-4772-9443-dfea9e64dc38",
+            "Value": {
+                "id": "13d3e0ac-1f05-4e1d-a4e2-a567135171ff",
+                "resourcePath": "objects\\oRPG\\oRPG.yy",
+                "resourceType": "GMObject"
             }
         },
         {

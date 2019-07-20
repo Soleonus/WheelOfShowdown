@@ -20,7 +20,9 @@
         "0613c114-37b3-4675-81ca-6b1db211da6b",
         "a7c52f3e-aa9c-4cd5-afb7-c7caf0ec3279",
         "b9ccca31-d030-499e-bff3-9a373f7f2823",
-        "48661c29-3f22-41e2-bce9-1f9465aa7bac"
+        "48661c29-3f22-41e2-bce9-1f9465aa7bac",
+        "756f3252-ee5f-425a-a5d4-1842841ded82",
+        "0f6e2e8f-5a47-4d20-94f8-94a561e8b5fc"
     ],
     "filterType": "GMSprite",
     "folderName": "Weapons",

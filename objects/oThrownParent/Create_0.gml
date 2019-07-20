@@ -6,7 +6,6 @@ flightspd = 0;
 maxcharge = 0;
 maxdamage = 0;
 maxdelay = 0;
-ammo = 0;
 grv = 0;
 xoffset = 0;
 yoffset = 0;

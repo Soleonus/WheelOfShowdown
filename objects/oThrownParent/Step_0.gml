@@ -16,8 +16,6 @@ if (!thrown)
 	}
 
 	image_xscale = abs(image_yscale);
-
-	if (ammo <= 0) { oPlayer.gun = 0; active = false; instance_destroy(); }
 	
 	if (delay > 0) delay--;
 
@@ -30,10 +28,8 @@ if (!thrown)
 		flightspd = flightspd * sign(mouse_x-x) * charge/maxcharge;
 		thrown = true;
 		damage = charge/maxcharge * maxdamage;
-		ammo--;
 		with(instance_copy(true))
 		{
-			ammo = other.ammo;
 			active = true;
 			thrown = false;
 			charge = 0;

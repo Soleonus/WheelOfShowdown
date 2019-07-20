@@ -15,5 +15,3 @@ ymove = 20;
 active = false;
 thrown = false;
 bounce = true;
-lastx = 0;
-lasty = 0;

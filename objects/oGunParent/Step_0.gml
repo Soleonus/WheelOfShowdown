@@ -13,16 +13,19 @@ else
 	else vspeed = 0;
 }
 
+var sxoffset = sprite_width - sprite_xoffset;
+var syoffset = sprite_height - sprite_yoffset;
+
 firingdelay = firingdelay - 1;
 recoil = max(0, recoil - 1);
 
-if (firemode == 0)
+if (firemode == 0) // Auto/semi-auto
 {
 	if (mouse_check_button(mb_left)) and (firingdelay < 0) and (ammo > 0) and (active)
 	{
 		recoil = maxrecoil;
 		firingdelay = maxfiredelay;
-		with (instance_create_layer(x,y,"Bullets",oBullet))
+		with (instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",oBullet))
 		{
 			speed = other.bulspeed;
 			damage = other.buldamage;
@@ -32,117 +35,28 @@ if (firemode == 0)
 		ammo--;
 	}
 }
-else if (firemode == 1)
+else if (firemode == 1) // Shotgun spray
 {
+	var p = pellets;
 	if (mouse_check_button(mb_left)) and (firingdelay < 0) and (ammo > 0) and (active)
 	{
 		recoil = maxrecoil;
 		firingdelay = maxfiredelay;
-		switch (pellets)
+		while (p > 0)
 		{
-			case 5:
+			with (instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",oBullet))
 			{
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				break;
+				speed = other.bulspeed;
+				damage = other.buldamage;
+				direction = other.image_angle + random_range (-other.range,other.range);
+				image_angle = direction;
 			}
-			case 8:
-			{
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-				with (instance_create_layer(x,y,"Bullets",oBullet))
-				{
-					speed = other.bulspeed;
-					damage = other.buldamage;
-					direction = other.image_angle + random_range (-other.range,other.range);
-					image_angle = direction;
-				}
-			}
-		}	
+			p--;
+		}
 		ammo--;
 	}
 }
-else if (firemode == 2)
+else if (firemode == 2) // Burst fire
 {
 	if (mouse_check_button(mb_left)) and (firingdelay < 0) and (ammo > 0) and (active) and (!firing)
 	{
@@ -155,7 +69,7 @@ else if (firemode == 2)
 	{
 		if (c % (maxc/burst) == 0)
 		{
-			with (instance_create_layer(x,y,"Bullets",oBullet))
+			with (instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",oBullet))
 			{
 				speed = other.bulspeed;
 				damage = other.buldamage;
@@ -169,6 +83,36 @@ else if (firemode == 2)
 	if (c == 0)
 	{
 		firing = false;
+	}
+}
+else if (firemode == 3) // Explosive projectile
+{
+	if (actproj == false and ammo > 0 and active)
+	{
+		var proj = instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",projectile)
+		proj.image_angle = image_angle;
+		actproj = true;
+	}
+	if (actproj)
+	{
+		proj = instance_nearest(x + lengthdir_x(sxoffset, image_angle),y + lengthdir_y(sxoffset, image_angle),projectile);
+		proj.x = x + lengthdir_x(sxoffset, image_angle);
+		proj.y = y + lengthdir_y(sxoffset, image_angle);
+		proj.image_angle = image_angle;
+	}
+	if (mouse_check_button(mb_left)) and (firingdelay < 0) and (actproj) and (active)
+	{
+		proj = instance_nearest(x + lengthdir_x(sxoffset, image_angle),y + lengthdir_y(sxoffset, image_angle),projectile);
+		proj.active = true;
+		recoil = maxrecoil;
+		firingdelay = maxfiredelay;
+		proj.rad = projrad;
+		proj.speed = bulspeed;
+		proj.damage = buldamage;
+		proj.direction = image_angle + random_range (-other.range,other.range);
+		proj.image_angle = proj.direction;
+		actproj = false;
+		ammo--;
 	}
 }
 
