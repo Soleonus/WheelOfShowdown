@@ -2,7 +2,7 @@
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(ord("W"));
-key_reload = keyboard_check_pressed(ord("F"));
+key_drop = keyboard_check_pressed(ord("F"));
 
 //Calculate Movement
 var move = key_right - key_left;
@@ -162,34 +162,10 @@ if (keyboard_check_pressed(ord("H"))) // RPG
 		instance_create_layer(x,y,"Gun",oRPG);
 }
 
-if (key_reload) 
+if (key_drop) 
 {
 	hasgun = false;
 	gun.active = false;
 	gun.x += gun.sprite_width+5 * sign(mouse_x-x);
 	gun = 0;
 }
-
-////Animation
-//image_yscale = abs(image_xscale);
-//if (!place_meeting(x,y+1,oWall))
-//{
-//	sprite_index = sPlayerA;
-//	image_speed = 0;
-//	if (sign(vsp) > 0) image_index = 1; else image_index = 0;	
-//}
-//else
-//{
-//	image_speed = 1;
-//	if (hsp == 0)
-//	{
-//		sprite_index = sPlayer;	
-//	}
-//	else
-//	{
-//		sprite_index = sPlayerR;
-//	}
-//}
-
-//if (mouse_x-x != 0) image_xscale = sign(mouse_x-x);
-//else image_xscale = 1;

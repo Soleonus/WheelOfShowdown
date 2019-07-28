@@ -6,3 +6,4 @@ wjumps = 1;
 hasgun = false;
 gun = 0;
 pscore = 0;
+surf = -1;

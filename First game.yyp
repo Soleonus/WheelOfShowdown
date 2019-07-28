@@ -423,6 +423,14 @@
             }
         },
         {
+            "Key": "905aa699-4ac5-4e98-9f18-ac464b210bfd",
+            "Value": {
+                "id": "1dc21121-6677-455d-b2e0-9d9cad137e21",
+                "resourcePath": "tilesets\\tWalls\\tWalls.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "939cbff8-862e-421c-b723-fa1e27bf43fb",
             "Value": {
                 "id": "2b6b71df-456b-4f95-9dff-219b3f687e4c",
@@ -623,6 +631,14 @@
             }
         },
         {
+            "Key": "ca6816ce-1b04-4e52-977d-ff48cd44c840",
+            "Value": {
+                "id": "fb98931d-f414-40c2-83a5-eb872875ad52",
+                "resourcePath": "objects\\oLightParent\\oLightParent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "8be42fa5-3a3a-4a70-bbf9-bf6553336fda",
@@ -739,6 +755,14 @@
             "Value": {
                 "id": "f41896f2-7dc6-4291-8eb4-bdf9b484c2b1",
                 "resourcePath": "sprites\\sFlintlock\\sFlintlock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ef716e69-0c94-4305-a6ca-112dcce400ed",
+            "Value": {
+                "id": "3e285839-0781-42ff-ab81-b2475ec1117b",
+                "resourcePath": "sprites\\sLight\\sLight.yy",
                 "resourceType": "GMSprite"
             }
         },
