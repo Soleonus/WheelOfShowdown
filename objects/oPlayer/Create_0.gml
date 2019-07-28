@@ -5,3 +5,4 @@ walksp = 4;
 wjumps = 1;
 hasgun = false;
 gun = 0;
+pscore = 0;

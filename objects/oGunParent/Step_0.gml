@@ -27,6 +27,7 @@ if (firemode == 0) // Auto/semi-auto
 		firingdelay = maxfiredelay;
 		with (instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",oBullet))
 		{
+			parent = other;
 			speed = other.bulspeed;
 			damage = other.buldamage;
 			direction = other.image_angle + random_range (-other.range,other.range);
@@ -46,6 +47,7 @@ else if (firemode == 1) // Shotgun spray
 		{
 			with (instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",oBullet))
 			{
+				parent = other;
 				speed = other.bulspeed;
 				damage = other.buldamage;
 				direction = other.image_angle + random_range (-other.range,other.range);
@@ -71,6 +73,7 @@ else if (firemode == 2) // Burst fire
 		{
 			with (instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",oBullet))
 			{
+				parent = other;
 				speed = other.bulspeed;
 				damage = other.buldamage;
 				direction = other.image_angle + random_range (-other.range,other.range);
@@ -104,6 +107,7 @@ else if (firemode == 3) // Explosive projectile
 	{
 		proj = instance_nearest(x + lengthdir_x(sxoffset, image_angle),y + lengthdir_y(sxoffset, image_angle),projectile);
 		proj.active = true;
+		proj.parent = self;
 		recoil = maxrecoil;
 		firingdelay = maxfiredelay;
 		proj.rad = projrad;

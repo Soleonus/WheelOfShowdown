@@ -15,3 +15,4 @@ xoffset = 15;
 yoffset = 10;
 firemode = 1;
 pellets = 5;
+kill = false;

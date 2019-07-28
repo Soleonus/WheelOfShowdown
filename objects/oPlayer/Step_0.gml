@@ -2,6 +2,7 @@
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(ord("W"));
+key_reload = keyboard_check_pressed(ord("F"));
 
 //Calculate Movement
 var move = key_right - key_left;
@@ -154,12 +155,14 @@ if (keyboard_check_pressed(ord("G"))) // Grenades
 		hasgun = false;
 		instance_create_layer(x,y,"Gun",oGrenade);
 }
+if (keyboard_check_pressed(ord("H"))) // RPG
+{
+		layer_destroy_instances("Gun");
+		hasgun = false;
+		instance_create_layer(x,y,"Gun",oRPG);
+}
 
-//if (hasgun) show_debug_message(gun);
-
-//if (!gun.active) { gun = 0; hasgun = false; }
-
-if (keyboard_check_pressed(ord("F"))) 
+if (key_reload) 
 {
 	hasgun = false;
 	gun.active = false;
@@ -167,26 +170,26 @@ if (keyboard_check_pressed(ord("F")))
 	gun = 0;
 }
 
-//Animation
-image_yscale = abs(image_xscale);
-if (!place_meeting(x,y+1,oWall))
-{
-	sprite_index = sPlayerA;
-	image_speed = 0;
-	if (sign(vsp) > 0) image_index = 1; else image_index = 0;	
-}
-else
-{
-	image_speed = 1;
-	if (hsp == 0)
-	{
-		sprite_index = sPlayer;	
-	}
-	else
-	{
-		sprite_index = sPlayerR;
-	}
-}
+////Animation
+//image_yscale = abs(image_xscale);
+//if (!place_meeting(x,y+1,oWall))
+//{
+//	sprite_index = sPlayerA;
+//	image_speed = 0;
+//	if (sign(vsp) > 0) image_index = 1; else image_index = 0;	
+//}
+//else
+//{
+//	image_speed = 1;
+//	if (hsp == 0)
+//	{
+//		sprite_index = sPlayer;	
+//	}
+//	else
+//	{
+//		sprite_index = sPlayerR;
+//	}
+//}
 
-if (mouse_x-x != 0) image_xscale = sign(mouse_x-x);
-else image_xscale = 1;
+//if (mouse_x-x != 0) image_xscale = sign(mouse_x-x);
+//else image_xscale = 1;
