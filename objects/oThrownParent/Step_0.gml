@@ -2,8 +2,8 @@ if (!thrown)
 {
 	if (active == true)
 	{
-		x = oPlayer.x + (-xmove * charge/maxcharge + xoffset) * sign(mouse_x-x);
-		y = oPlayer.y - ymove * charge/maxcharge + yoffset;
+		x = parent.x + (-xmove * charge/maxcharge + xoffset) * sign(mouse_x-parent.x);
+		y = parent.y - ymove * charge/maxcharge + yoffset;
 		image_angle = point_direction(x,y,mouse_x,mouse_y) + charge * sign(mouse_x-x);
 		if(mouse_x > x) image_yscale = 1; else image_yscale = -1;
 	}
@@ -37,7 +37,6 @@ if (!thrown)
 		}
 		direction = point_direction(x,y,mouse_x,mouse_y);
 		speed = abs(flightspd);
-		active = false;
 	}
 }
 else if (thrown)

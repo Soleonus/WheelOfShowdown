@@ -1,7 +1,7 @@
 if (active == true)
 {
-	x = oPlayer.x + xoffset * sign(mouse_x-x);
-	y = oPlayer.y + yoffset;
+	x = parent.x + xoffset * sign(mouse_x-parent.x);
+	y = parent.y + yoffset;
 	image_angle = point_direction(x,y,mouse_x,mouse_y) + recangle * max(0,(firingdelay / maxfiredelay)) * sign(mouse_x-x);
 	if(mouse_x > x) image_yscale = 1; else image_yscale = -1;
 }

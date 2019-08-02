@@ -11,8 +11,8 @@ if (other.hp <= 0)
 		}
 	}
 	else
-		{ if (oPlayer.gun == parent) oPlayer.pscore++; }
+		{ parent.parent.pscore++; }
 }
 else if (parent.firemode == 1) and (other.hp > 0) parent.kill = false;
 
-show_debug_message(oPlayer.pscore);
+show_debug_message(parent.parent.pscore);

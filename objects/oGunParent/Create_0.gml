@@ -14,3 +14,4 @@ active = false;
 xoffset = 0;
 yoffset = 0;
 firemode = 0;
+parent = 0;

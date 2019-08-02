@@ -162,10 +162,10 @@ if (keyboard_check_pressed(ord("H"))) // RPG
 		instance_create_layer(x,y,"Gun",oRPG);
 }
 
-if (key_drop) 
+if (key_drop) and (hasgun)
 {
 	hasgun = false;
 	gun.active = false;
-	gun.x += gun.sprite_width+5 * sign(mouse_x-x);
+	gun.x += (gun.sprite_width + 10) * sign(mouse_x-x);
 	gun = 0;
 }
