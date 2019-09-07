@@ -5,28 +5,29 @@ if (keyboard_check_pressed(vk_space) and (!spun))
 	spun = true;
 	
 	choice = irandom(99);
+	show_debug_message(choice);
 
 	if (choice <= 4)
 	{
-		output = choose(oMinigun);
+		output = legend[irandom(array_length_1d(legend)-1)];
 		category = 0;
 		add = irandom_range(106, 128);
 	}
 	else if (choice <= 24)
 	{
-		output = choose(oSniper, oP90, oKatana, oAutoShotgun);
+		output = epic[irandom(array_length_1d(epic)-1)];
 		category = 1;
 		add = choose(irandom_range(0, 27), irandom_range(180, 206), irandom_range(286, 308));
 	}
 	else if (choice <= 54)
 	{
-		output = choose(oShotgun, oRevolver, oScar);
+		output = rare[irandom(array_length_1d(rare)-1)];
 		category = 2;
 		add = choose(irandom_range(52, 74), irandom_range(153, 180), irandom_range(232, 254), irandom_range(333, 360));
 	}
 	else if (choice <= 99)
 	{
-		output = choose(oUzi, oMachete, oM416, oFlintlock, oM1911, oShuriken, oToy);
+		output = common[irandom(array_length_1d(common)-1)];
 		category = 3;
 		add = choose(irandom_range(28, 51), irandom_range(75, 105), irandom_range(129, 152), irandom_range(207, 231), irandom_range(265, 285), irandom_range(309, 332));
 	}
@@ -34,7 +35,8 @@ if (keyboard_check_pressed(vk_space) and (!spun))
 if (spun)
 {
 	timer--;
-	
+	show_debug_message(add);
+	show_debug_message(image_angle % 360);
 	rspeed = timer*2;
 	
 	period = (2*pi*32)/rspeed;
@@ -43,10 +45,28 @@ if (spun)
 
 	if (timer <= 4)
 	{
-		if (round(image_angle) % 360 != add) { if (abs(timer) % 2 == 0) image_angle++; }
+		if (round(image_angle) % 360 != add) { if (abs(timer) % 1.5 == 0) image_angle++; }
 		else
 		{
-			instance_create_layer(x,y+100,"Gun", output);
+			switch(category) 
+			{
+				case 0:
+					chest = instance_nearest(x,y,oOChest);
+						instance_create_layer(chest.x,chest.y,"Gun", output);
+						break;
+				case 1:
+					chest = instance_nearest(x,y,oPChest);
+						instance_create_layer(chest.x,chest.y,"Gun", output);
+						break;
+				case 2:
+					chest = instance_nearest(x,y,oBChest);
+						instance_create_layer(chest.x,chest.y,"Gun", output);
+						break;
+				case 3:
+					chest = instance_nearest(x,y,oGChest);
+						instance_create_layer(chest.x,chest.y,"Gun", output);
+						break;
+			}
 			show_debug_message(category);
 			spun = false;	
 		}
