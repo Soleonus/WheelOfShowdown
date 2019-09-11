@@ -551,6 +551,14 @@
             }
         },
         {
+            "Key": "a4fdfb35-9e87-4b5a-94a5-76368cb1d3fe",
+            "Value": {
+                "id": "57bb0ff3-3cda-4814-b534-a9127c2aafae",
+                "resourcePath": "objects\\oChestParent\\oChestParent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a5c4fc49-82c0-49ca-a3d3-9627d772c23f",
             "Value": {
                 "id": "6d98815a-11c0-401f-bca1-3f62d13df8eb",

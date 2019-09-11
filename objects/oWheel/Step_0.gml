@@ -51,24 +51,28 @@ if (spun)
 			switch(category) 
 			{
 				case 0:
-					chest = instance_nearest(x,y,oOChest);
-						instance_create_layer(chest.x,chest.y,"Gun", output);
-						break;
+					chest = instance_nearest(x,y-15,oOChest);
+					break;
 				case 1:
-					chest = instance_nearest(x,y,oPChest);
-						instance_create_layer(chest.x,chest.y,"Gun", output);
-						break;
+					chest = instance_nearest(x,y-10,oPChest);
+					break;
 				case 2:
-					chest = instance_nearest(x,y,oBChest);
-						instance_create_layer(chest.x,chest.y,"Gun", output);
-						break;
+					chest = instance_nearest(x,y-10,oBChest);
+					break;
 				case 3:
-					chest = instance_nearest(x,y,oGChest);
-						instance_create_layer(chest.x,chest.y,"Gun", output);
-						break;
+					chest = instance_nearest(x,y-10,oGChest);
+					break;
 			}
-			show_debug_message(category);
-			spun = false;	
+			chest.image_speed = 1;
+			if (chest.image_index == 4)
+				instance_create_layer(chest.x-sprite_get_width(output)/2,chest.y-20,"Gun", output);
+			else if (chest.image_index == 9)
+			{
+				chest.image_index = 0;
+				chest.image_speed = 0;
+				spun = false;	
+			}
+			//show_debug_message(category);
 		}
 	}
 }
