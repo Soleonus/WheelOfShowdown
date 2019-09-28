@@ -13,9 +13,6 @@ else
 	else vspeed = 0;
 }
 
-var sxoffset = sprite_width - sprite_xoffset;
-var syoffset = sprite_height - sprite_yoffset;
-
 firingdelay = firingdelay - 1;
 recoil = max(0, recoil - 1);
 
@@ -25,7 +22,8 @@ if (firemode == 0) // Auto/semi-auto
 	{
 		recoil = maxrecoil;
 		firingdelay = maxfiredelay;
-		with (instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",oBullet))
+		with (instance_create_layer(x+lengthdir_x(sprite_width/2-sprite_xoffset,image_angle),
+									y+lengthdir_y(sprite_width/2-sprite_xoffset,image_angle),"Bullets",oBullet))
 		{
 			parent = other;
 			speed = other.bulspeed;
@@ -45,7 +43,8 @@ else if (firemode == 1) // Shotgun spray
 		firingdelay = maxfiredelay;
 		while (p > 0)
 		{
-			with (instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",oBullet))
+			with (instance_create_layer(x+lengthdir_x(sprite_width/2-sprite_xoffset,image_angle),
+										y+lengthdir_y(sprite_width/2-sprite_xoffset,image_angle),"Bullets",oBullet))
 			{
 				parent = other;
 				speed = other.bulspeed;
@@ -71,7 +70,8 @@ else if (firemode == 2) // Burst fire
 	{
 		if (c % (maxc/burst) == 0)
 		{
-			with (instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",oBullet))
+			with (instance_create_layer(x+lengthdir_x(sprite_width/2-sprite_xoffset,image_angle),
+										y+lengthdir_y(sprite_width/2-sprite_xoffset,image_angle),"Bullets",oBullet))
 			{
 				parent = other;
 				speed = other.bulspeed;
@@ -92,20 +92,23 @@ else if (firemode == 3) // Explosive projectile
 {
 	if (actproj == false and ammo > 0 and active)
 	{
-		var proj = instance_create_layer(x+sxoffset,y-syoffset/2,"Bullets",projectile)
+		var proj = instance_create_layer(x+lengthdir_x(sprite_width-sprite_xoffset,image_angle),
+										 y+lengthdir_y(sprite_width-sprite_xoffset,image_angle),"Bullets",projectile)
 		proj.image_angle = image_angle;
 		actproj = true;
 	}
 	if (actproj)
 	{
-		proj = instance_nearest(x + lengthdir_x(sxoffset, image_angle),y + lengthdir_y(sxoffset, image_angle),projectile);
-		proj.x = x + lengthdir_x(sxoffset, image_angle);
-		proj.y = y + lengthdir_y(sxoffset, image_angle);
+		proj = instance_nearest(x+lengthdir_x(sprite_width-sprite_xoffset,image_angle),
+								y+lengthdir_y(sprite_width-sprite_xoffset,image_angle),projectile);
+		proj.x = x + lengthdir_x(sprite_width-sprite_xoffset, image_angle);
+		proj.y = y + lengthdir_y(sprite_width-sprite_xoffset, image_angle);
 		proj.image_angle = image_angle;
 	}
 	if (mouse_check_button(mb_left)) and (firingdelay < 0) and (actproj) and (active)
 	{
-		proj = instance_nearest(x + lengthdir_x(sxoffset, image_angle),y + lengthdir_y(sxoffset, image_angle),projectile);
+		proj = instance_nearest(x+lengthdir_x(sprite_width-sprite_xoffset,image_angle),
+								y+lengthdir_x(sprite_width-sprite_xoffset,image_angle),projectile);
 		proj.active = true;
 		proj.parent = self;
 		recoil = maxrecoil;

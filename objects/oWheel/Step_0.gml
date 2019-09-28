@@ -65,7 +65,7 @@ if (spun)
 			}
 			chest.image_speed = 1;
 			if (chest.image_index == 4)
-				instance_create_layer(chest.x-sprite_get_width(output)/2,chest.y-20,"Gun", output);
+				instance_create_layer(chest.x-sprite_get_width(output)/(2*1.25),chest.y-chest.sprite_height,"Gun", output);
 			else if (chest.image_index == 9)
 			{
 				chest.image_index = 0;
