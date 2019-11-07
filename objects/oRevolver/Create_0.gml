@@ -1,0 +1,17 @@
+firingdelay = 0;
+recoil = 0;
+maxfiredelay = 35;
+maxrecoil = 7;
+recangle = 75;
+buldamage = 4;
+bulspeed = 25;
+ammo = 6;
+magazine = 6;
+i = 0;
+reload = 71;
+range = 2;
+active = false;
+xoffset = 15;
+yoffset = 10;
+firemode = 0;
+parent = 0;

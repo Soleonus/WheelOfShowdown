@@ -1,0 +1,13 @@
+common = [oUzi, oMachete, oM416, oFlintlock, oM1911, oShuriken, oToy];
+rare = [oShotgun, oRevolver, oScar];
+epic = [oSniper, oP90, oKatana, oAutoShotgun];
+legend = [oMinigun];
+choice = 0;
+output = 0;
+category = 0;
+rspeed = 0;
+period = 0;
+add = 0;
+timer = 0;
+spun = false;
+randomize();
